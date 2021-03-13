@@ -1,0 +1,60 @@
+.App {
+  text-align: center;
+  box-sizing: content-box;
+}
+
+.headerContainer {
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  width: 97%;
+  height: 100%;
+  padding: 10px;
+  /* box-sizing: content-box; */
+  /* margin-top: 25px; */
+  /* border: 2px solid red; */
+  display: inline-block;
+  text-align: center;
+  margin: auto;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.titleContainer {
+  width: 97%;
+  height: 390px;
+  padding: 10px;
+  /* box-sizing: content-box; */
+  /* border: 2px solid orange; */
+  text-align: center;
+  display: flex;
+  margin: auto;
+  background: url('./backgroundImg/clear-air-fly-fantastic-travel_1232-3824.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* justify-content: center; */
+}
+
+.leftSideContainer {
+  width: 33%;
+  height: 100%;
+  float: left;
+  margin-right: 5px;
+  /* border: 2px solid green; */
+}
+
+.centerSideContainer {
+  width: 33%;
+  height: 100%;
+  float: left;
+  margin-right: 5px;
+  /* border: 2px solid greenyellow; */
+}
+
+.rightSideContainer {
+  width: 33%;
+  height: 100%;
+  float: left;
+  /* border: 2px solid grey; */
+}
