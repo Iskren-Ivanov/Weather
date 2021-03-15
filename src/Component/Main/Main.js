@@ -5,26 +5,19 @@ import getWeatherIcon from '../../weatherFunk/getWeatherIcon';
 import './Main.css';
 
 const Main = ({ city }) => {
-    debugger;
     const [data, setData] = useState({});
     const [nextTreeDaysInfo, setNextTreeDaysInfo] = useState([]);
 
     const [currentWeatherIcon, setCurrentWeatherIcon] = useState('');
-    const [nextWeatherIconOne, setNextWeatherIconOne] = useState('');
-    const [nextWeatherIconTwo, setNextWeatherIconTwo] = useState('');
-    const [nextWeatherIconThree, setNextWeatherIconThree] = useState('');
-
 
     useEffect(() => {
         getWeather(city)
             .then(async response => {
-                // debugger;
                 setData(response);
                 setNextTreeDaysInfo(await takeNextThreeDaysInfo(response.dateTime, city));
-                setCurrentWeatherIcon(getWeatherIcon(data.mainDiscription))
-                setNextWeatherIconOne(getWeatherIcon(nextTreeDaysInfo[0]?.weatherMain))
-                setNextWeatherIconTwo(getWeatherIcon(nextTreeDaysInfo[1]?.weatherMain))
-                setNextWeatherIconThree(getWeatherIcon(nextTreeDaysInfo[2]?.weatherMain))
+                takeNextThreeDaysInfo(response.dateTime, city);
+
+                setCurrentWeatherIcon(getWeatherIcon(response.mainDiscription));
             });
     }, []);
 
@@ -53,17 +46,17 @@ const Main = ({ city }) => {
             </div>
             <div className="nexDays">
                 <li>
-                    <i className="day-icon">{nextWeatherIconOne}</i>
+                    <i className="day-icon">{getWeatherIcon(nextTreeDaysInfo[0]?.weatherMain)}</i>
                     <span className="day-name">{nextTreeDaysInfo[0]?.dayOfWeek} </span>
                     <span className="day-temp">{nextTreeDaysInfo[0]?.temp}°C </span>
                 </li>
                 <li>
-                    <i className="day-icon">{nextWeatherIconTwo}</i>
+                    <i className="day-icon">{getWeatherIcon(nextTreeDaysInfo[1]?.weatherMain)}</i>
                     <span className="day-name">{nextTreeDaysInfo[1]?.dayOfWeek} </span>
                     <span className="day-temp">{nextTreeDaysInfo[1]?.temp}°C </span>
                 </li>
                 <li>
-                    <i className="day-icon">{nextWeatherIconThree}</i>
+                    <i className="day-icon">{getWeatherIcon(nextTreeDaysInfo[2]?.weatherMain)}</i>
                     <span className="day-name">{nextTreeDaysInfo[2]?.dayOfWeek} </span>
                     <span className="day-temp">{nextTreeDaysInfo[2]?.temp}°C</span>
                 </li>
