@@ -6,9 +6,7 @@ const getWeаtherNextSixDays = async (city = "Sofia") => {
         .then(data => data)
         .catch(err => err);
 
-    // const dataInfo = [];
     const weatherForSixDays = {};
-    // dataInfo.name = data.city.name;
     weatherForSixDays.city = data.city.name;
     weatherForSixDays.forecast = [];
     data.list.forEach((arrayItem, index) => {

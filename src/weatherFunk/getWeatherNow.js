@@ -20,8 +20,8 @@ const getWeаther = async (city = "Sofia") => {
     let sunrise = (new Date(1000 * data.sys.sunrise)).toLocaleTimeString('it-IT');
     let sunset = (new Date(1000 * data.sys.sunset)).toLocaleTimeString('it-IT');
     const dateTimeObj = new Date(data.dt * 1000);
-    debugger;
-    const getTime = dateTimeObj.getTime();
+    // debugger;
+    // const getTime = dateTimeObj.getTime();
     const dateTime = dateTimeObj.toUTCString();
     const locationName = data.name;
     const temp = Math.round(data.main.temp);

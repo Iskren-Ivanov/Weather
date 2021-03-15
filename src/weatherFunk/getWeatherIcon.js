@@ -4,7 +4,6 @@ import CloudSnow from '../Component/FeatherIcons/CloundSnow';
 import Cloud from '../Component/FeatherIcons/Cloud';
 
 const getWeatherIcon = (discription) => {
-    // debugger;
     switch (discription) {
         case "Clear": return <CloudOff />
         case "Rain": return <CloudRain />

@@ -5,13 +5,15 @@ import getWeatherIcon from '../../../weatherFunk/getWeatherIcon';
 import './Main.css';
 
 const Main = ({ city }) => {
+    debugger;
     const [data, setData] = useState({});
     const [nextTreeDaysInfo, setNextTreeDaysInfo] = useState([]);
 
-    // const [currentWeatherIcon, setCurrentWeatherIcon] = useState('');
-    // const [nextWeatherIconOne, setNextWeatherIconOne] = useState('');
-    // const [nextWeatherIconTwo, setNextWeatherIconTwo] = useState('');
-    // const [nextWeatherIconThree, setNextWeatherIconThree] = useState('');
+    const [currentWeatherIcon, setCurrentWeatherIcon] = useState('');
+    const [nextWeatherIconOne, setNextWeatherIconOne] = useState('');
+    const [nextWeatherIconTwo, setNextWeatherIconTwo] = useState('');
+    const [nextWeatherIconThree, setNextWeatherIconThree] = useState('');
+
 
     useEffect(() => {
         getWeather(city)
@@ -19,24 +21,12 @@ const Main = ({ city }) => {
                 // debugger;
                 setData(response);
                 setNextTreeDaysInfo(await takeNextThreeDaysInfo(response.dateTime, city));
-
-                // setCurrentWeatherIcon(getWeatherIcon(data.mainDiscription))
-                // setNextWeatherIconOne(getWeatherIcon(nextTreeDaysInfo[0]?.weatherMain))
-                // setNextWeatherIconTwo(getWeatherIcon(nextTreeDaysInfo[1]?.weatherMain))
-                // setNextWeatherIconThree(getWeatherIcon(nextTreeDaysInfo[2]?.weatherMain))
+                setCurrentWeatherIcon(getWeatherIcon(data.mainDiscription))
+                setNextWeatherIconOne(getWeatherIcon(nextTreeDaysInfo[0]?.weatherMain))
+                setNextWeatherIconTwo(getWeatherIcon(nextTreeDaysInfo[1]?.weatherMain))
+                setNextWeatherIconThree(getWeatherIcon(nextTreeDaysInfo[2]?.weatherMain))
             });
     }, []);
-    let currentWeatherIcon = '';
-    let nextWeatherIconOne = '';
-    let nextWeatherIconTwo = '';
-    let nextWeatherIconThree = '';
-    if (data.mainDiscription && nextTreeDaysInfo.length > 1) {
-        // debugger;
-        currentWeatherIcon = getWeatherIcon(data.mainDiscription);
-        nextWeatherIconOne = getWeatherIcon(nextTreeDaysInfo[0]?.weatherMain);
-        nextWeatherIconTwo = getWeatherIcon(nextTreeDaysInfo[1]?.weatherMain);
-        nextWeatherIconThree = getWeatherIcon(nextTreeDaysInfo[2]?.weatherMain);
-    }
 
     return (
         <div className="mainContainer">
@@ -58,7 +48,7 @@ const Main = ({ city }) => {
 
             </div>
             <div className="wind">
-                <span className="title">Wind</span>
+                <span className="title">Wind: </span>
                 <span className="value"> {data.windSpeed} km / h</span>
             </div>
             <div className="nexDays">
