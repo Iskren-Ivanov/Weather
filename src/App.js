@@ -1,6 +1,6 @@
 import './App.css';
 import NavBar from './Component/Header/NavBar.js';
-import Title from './Component/Title/Main/Main';
+import Title from './Component/Main/Main';
 
 function App() {
   return (

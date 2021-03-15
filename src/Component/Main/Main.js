@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import getWeather from '../../../weatherFunk/getWeatherNow';
-import takeNextThreeDaysInfo from '../../../weatherFunk/takeNextThreeDaysInfo';
-import getWeatherIcon from '../../../weatherFunk/getWeatherIcon';
+import getWeather from '../../weatherFunk/getWeatherNow';
+import takeNextThreeDaysInfo from '../../weatherFunk/takeNextThreeDaysInfo';
+import getWeatherIcon from '../../weatherFunk/getWeatherIcon';
 import './Main.css';
 
 const Main = ({ city }) => {
