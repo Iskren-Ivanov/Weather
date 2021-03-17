@@ -1,8 +1,6 @@
 .search {
   width: 100%;
-  /* position: relative; */
   display: flex;
-  /* float: left; */
 }
 
 .searchTerm {
@@ -14,7 +12,6 @@
   border-radius: 5px 0 0 5px;
   outline: none;
   color: #9DBFAF;
-  /* padding-left: 20px; */
 }
 
 .searchTerm:focus {
@@ -28,16 +25,4 @@
   color: #fff;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
-}
-
-/*Resize the wrap to see the search bar change!*/
-
-.wrap {
-  /* width: 100%; */
-  /* transform: translate(-50%, -50%); */
-  /* position: relative; */
-  /* top: 50%; */
-  /* left: 14%; */
-  /* margin: 20px; */
-  overflow: hidden
 }

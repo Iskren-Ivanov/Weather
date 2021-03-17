@@ -1,7 +1,6 @@
 const getWeаtherNextSixDays = async (city = "Sofia") => {
-    const searchCity = city;
     const appKey = "e0906f60e7b624e1904f340f026ee8dd";
-    const data = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${searchCity}&appid=${appKey}&units=metric`)
+    const data = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${appKey}&units=metric`)
         .then(response => response.json())
         .then(data => data)
         .catch(err => err);

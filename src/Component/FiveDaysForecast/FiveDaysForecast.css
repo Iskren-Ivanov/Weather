@@ -1,14 +1,4 @@
-.headerContainer {
-    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-    width: 97%;
-    height: 100%;
-    padding: 10px;
-    display: inline-block;
-    text-align: center;
-    margin: auto;
-}
-
-.weathersColumns {
+.weathersColFiveDaysForecast {
     width: 97%;
     height: 390px;
     padding: 10px;
@@ -21,22 +11,39 @@
     background-size: cover;
 }
 
-.leftColums {
+.oneCol {
     width: 33%;
     height: 100%;
     float: left;
     margin-right: 5px;
+    border: 1px solid darkblue;
 }
 
-.centerColums {
+.twoCol {
     width: 33%;
     height: 100%;
     float: left;
     margin-right: 5px;
+    border: 1px solid black;
 }
 
-.rightColums {
+.threeCol {
     width: 33%;
     height: 100%;
     float: left;
+    border: 1px solid red;
+}
+
+.fourCol {
+    width: 33%;
+    height: 100%;
+    float: left;
+    border: 1px solid pink;
+}
+
+.fiveCol {
+    width: 33%;
+    height: 100%;
+    float: left;
+    border: 1px solid blue;
 }

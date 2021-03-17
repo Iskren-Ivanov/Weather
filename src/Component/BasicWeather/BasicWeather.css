@@ -1,0 +1,19 @@
+.basicWeatherContainer {
+    padding-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.location {
+    margin-top: 10px;
+}
+
+.nexDays {
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+.weather-temp {
+    margin: 0;
+    font-weight: 600;
+    font-size: 2em;
+}
