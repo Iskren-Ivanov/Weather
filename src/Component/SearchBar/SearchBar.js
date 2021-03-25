@@ -9,24 +9,29 @@ const SearchBar = () => {
 
     const handleSubmit = event => {
         event.preventDefault();
+        // /fiveDaysForecastIn/:City
         history.push({
-            pathname: '/sevenDaysForecast',
+            pathname: '/fiveDaysForecast',
             city: searchCity
         });
     };
 
     return (
         <form className='search' onSubmit={e => handleSubmit(e)}>
-            <input
-                type='text'
-                className='searchTerm'
-                placeholder='Get Weather Forecast'
-                value={searchCity}
-                onChange={(e) => setSearchCity(e.target.value)} />
-            <button
-                type='submit'
-                className='searchButton'
-            > Search </button>
+            <div classNanme="box box-1">
+                <input
+                    type='text'
+                    className='searchTerm'
+                    placeholder='Get Weather Forecast'
+                    value={searchCity}
+                    onChange={(e) => setSearchCity(e.target.value)} />
+            </div>
+            <div classNanme="box box-2">
+                <button
+                    type='submit'
+                    className='searchButton'
+                > Search </button>
+            </div>
         </form>
     );
 };

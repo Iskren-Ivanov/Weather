@@ -6,3 +6,61 @@
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+/* не работи */
+
+button {
+  cursor: pointer;
+}
+
+.headerContainer {
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  width: 97%;
+  height: 100%;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  margin: auto;
+}
+
+.weatherContainer {
+  width: 97%;
+  height: 390px;
+  padding: 10px;
+  display: flex;
+  margin: auto;
+  background: url('./backgroundImg/clear-air-fly-fantastic-travel_1232-3824.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  list-style: none;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.location {
+  margin-top: 10px;
+}
+
+.weatherMain {
+  text-transform: capitalize;
+}
+
+.weatherTemp {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.time {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.col {
+  width: 50%;
+  height: 100%;
+  float: left;
+  margin-right: 5px;
+}

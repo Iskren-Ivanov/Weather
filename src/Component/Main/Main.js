@@ -11,15 +11,15 @@ const Main = () => {
       <div className='headerContainer'>
         <SearchBar />
       </div>
-      <div className='weathersColumns'>
+      <div className='weatherContainer'>
         <div className='leftColums'>
-          <BasicWeather city={'Varna'} />
-        </div>
-        <div className='centerColums'>
           <BasicWeather city={'Sofia'} />
         </div>
+        <div className='centerColums'>
+          <BasicWeather city={'Rome'} />
+        </div>
         <div className='rightColums'>
-          <BasicWeather city={'Plovdiv'} />
+          <BasicWeather city={'Barcelona'} />
         </div>
       </div>
     </div>

@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Clock = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
-  return (
+const Clock = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => (
     <svg
       ref={ref}
       xmlns="http://www.w3.org/2000/svg"
@@ -19,8 +18,7 @@ const Clock = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =
       <circle cx="12" cy="12" r="10" />
       <polyline points="12 6 12 12 16 14" />
     </svg>
-  );
-});
+  ));
 
 Clock.propTypes = {
   color: PropTypes.string,

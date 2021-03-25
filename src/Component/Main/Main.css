@@ -1,26 +1,3 @@
-.headerContainer {
-    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-    width: 97%;
-    height: 100%;
-    padding: 10px;
-    display: inline-block;
-    text-align: center;
-    margin: auto;
-}
-
-.weathersColumns {
-    width: 97%;
-    height: 390px;
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    margin: auto;
-    background: url('../../backgroundImg/clear-air-fly-fantastic-travel_1232-3824.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .leftColums {
     width: 33%;
     height: 100%;

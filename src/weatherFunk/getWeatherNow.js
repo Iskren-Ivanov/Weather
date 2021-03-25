@@ -5,21 +5,31 @@ const getWeаther = async (city = "Sofia") => {
         .then(response => response.json())
         .then(data => data)
         .catch(err => err);
-        
-    const mainDiscription = data.weather[0].main
-    let description = data.weather[0].description;
-    let windSpeed = Math.round(data.wind.speed * 1.60);
-    let sunrise = (new Date(1000 * data.sys.sunrise)).toLocaleTimeString('it-IT');
-    let sunset = (new Date(1000 * data.sys.sunset)).toLocaleTimeString('it-IT');
-    const dateTimeObj = new Date(data.dt * 1000);
 
-    const dateTime = dateTimeObj.toUTCString();
+    const mainDiscription = data?.weather[0].main
+    let description = data?.weather[0].description;
+    let windSpeed = Math.round(data.wind.speed * 1.60);
+    let sunrise = ((new Date(1000 * data?.sys.sunrise)).toLocaleTimeString('en-GB', {
+        hour: "numeric",
+        minute: "numeric"
+    }));
+    let sunset = (new Date(1000 * data?.sys.sunset)).toLocaleTimeString('en-GB', {
+        hour: "numeric",
+        minute: "numeric"
+    });
+    const dateTimeObj = new Date(data?.dt * 1000);
+    const time = dateTimeObj.toLocaleTimeString('en-GB', {
+        hour: "numeric",
+        minute: "numeric"
+    });
+    const date = dateTimeObj.toLocaleDateString('en-GB');
     const locationName = data.name;
     const temp = Math.round(data.main.temp);
 
     return {
         locationName,
-        dateTime,
+        date,
+        time,
         temp,
         mainDiscription,
         description,

@@ -1,43 +1,36 @@
 import React, { useEffect, useState } from 'react'
 import getWeatherNextSixDays from '../../weatherFunk/getWeаtherNextSixDays';
-import getWeatherIcon from '../../weatherFunk/getWeatherIcon';
 import CurrentForecastCol from './CurrentForecastCol';
+import dividedIntoFiveDaysAverageForecast from '../../weatherFunk/dividedIntoFiveDaysAverageForecast';
 
-import './FiveDaysForecast.css';
+const FiveDaysForecast = ({ location: { city } }) => {
+    //тук при намиране на пътя без да си търсил град няма стойност city
 
-const FiveDaysForecast = ({ location }) => {
-    const [data, setData] = useState({});
-    // debugger;
-    // const [currentWeatherIcon, setCurrentWeatherIcon] = useState('');
+    const [forecast, setForecast] = useState({});
+    const [forecastT, setForecastT] = useState({});
+
     useEffect(async () => {
-        getWeatherNextSixDays(location.city)
+        getWeatherNextSixDays(city)
             .then(async response => {
-                setData(response);
 
-                // setCurrentWeatherIcon(getWeatherIcon(response.mainDiscription));
+                setForecast(dividedIntoFiveDaysAverageForecast(response));
+
+                setForecastT(response);
             });
-    }, [location.city]);
-    console.log(data);
+    }, [city]);
+
+    console.log(forecastT)
     return (
-        <div className="FiveDaysForecastContainer">
-            <div className='weathersColFiveDaysForecast'>
-                <div className='oneCol'>
-                    <CurrentForecastCol data={data} />
-                </div>
-                <div className='twoCol'>
-                    <CurrentForecastCol data={data} />
-                </div>
-                <div className='threeCol'>
-                    <CurrentForecastCol data={data} />
-                </div>
-                <div className='fourCol'>
-                    <CurrentForecastCol data={data} />
-                </div>
-                <div className='fiveCol'>
-                    <CurrentForecastCol data={data} />
-                </div>
-            </div>
-        </div >
+        <div className='weatherContainer'>
+            {Object.keys(forecast).map(key => {
+                // debugger;
+                return (<div className='col'>
+                    <CurrentForecastCol
+                        city={forecast[key]?.city}
+                        data={forecast[key]?.data} />
+                </div>)
+            })}
+        </div>
     );
 };
 

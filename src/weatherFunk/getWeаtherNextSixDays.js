@@ -6,16 +6,19 @@ const getWeаtherNextSixDays = async (city = "Sofia") => {
         .catch(err => err);
 
     const weatherForSixDays = {};
-    weatherForSixDays.city = data.city.name;
+    weatherForSixDays.city = data.city?.name;
     weatherForSixDays.forecast = [];
-    data.list.forEach((arrayItem, index) => {
+    data.list?.forEach((arrayItem, index) => {
         weatherForSixDays.forecast[index] = {
             "dayTime": arrayItem.dt_txt,
-            "feelsLike": arrayItem.main.feels_like,
-            "temp": arrayItem.main.temp,
+            "feelsLike": Math.round(arrayItem.main.feels_like),
+            "temp": Math.round(arrayItem.main.temp),
             "weatherDescription": arrayItem.weather[0].description,
             "weatherMainDescription": arrayItem.weather[0].main,
-            "windSpeed": arrayItem.wind.speed,
+            "windSpeed": Math.round(arrayItem.wind.speed),
+            "humidity": arrayItem.main.humidity,
+            "tempMax": arrayItem.main.temp_max,
+            "tempMin": arrayItem.main.temp_min,
         }
     });
 
