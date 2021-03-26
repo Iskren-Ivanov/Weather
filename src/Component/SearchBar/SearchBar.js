@@ -9,11 +9,7 @@ const SearchBar = () => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        // /fiveDaysForecastIn/:City
-        history.push({
-            pathname: '/fiveDaysForecast',
-            city: searchCity
-        });
+        history.push(`/fiveDaysForecastIn/${searchCity}`);
     };
 
     return (

@@ -8,7 +8,7 @@ import ForecastForTheAllDay from '../Component/ForecastForTheAllDay/ForecastForT
 const Router = () => (
     <Switch>
         <Route exact path='/' component={Main} />
-        <Route path='/fiveDaysForecast' component={FiveDaysForecast} />
+        <Route path='/fiveDaysForecastIn/:id' component={FiveDaysForecast} />
         <Route path='/theForecastIn/:id' component={ForecastForTheAllDay} />
         <Redirect to="/" />
     </Switch>

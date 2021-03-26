@@ -3,18 +3,10 @@ import { useHistory } from 'react-router-dom';
 
 import './BtnShowDetails.css';
 
-const BtnShowDetails = ({ city, date }) => {
-    // debugger;
+const BtnShowDetails = ({ city }) => {
     const history = useHistory();
-    const showDetails = () => {
-        history.push(`/theForecastIn/${city}`, {
-            city,
-            date,
-        });
-    };
-
     return (
-        <button className="btnShowDetailedForecast" onClick={() => showDetails()}>Show Detailed Forecast</button>
+        <button className="btnShowDetailedForecast" onClick={() => history.push(`/theForecastIn/${city}`)}> Show Detailed Forecast</button >
     );
 };
 

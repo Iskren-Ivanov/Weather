@@ -6,7 +6,6 @@ import Clock from '../FeatherIcons/Clock';
 const ForecastCol = ({ forecast }) => {
     // debugger;
     const newDate = new Date(forecast.dayTime);
-    debugger;
     const time = newDate.toLocaleTimeString('en-GB', {
         hour: "numeric",
         minute: "numeric"
