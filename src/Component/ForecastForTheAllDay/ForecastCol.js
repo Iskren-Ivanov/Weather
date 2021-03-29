@@ -4,33 +4,44 @@ import Clock from '../FeatherIcons/Clock';
 
 
 const ForecastCol = ({ forecast }) => {
-    // debugger;
     const newDate = new Date(forecast.dayTime);
     const time = newDate.toLocaleTimeString('en-GB', {
         hour: "numeric",
         minute: "numeric"
     });
+    // <tr>
+    // <td>
+    //     // Monday
+    // </td>
+    // </tr>
+    // <tr>
+    // <td>
+    // date
+
+    // </td>
+    // </tr>
+    // <tr>
+
+    // </tr>
+
     return (
-        <div className="col">
-            <div className="dateTime">
-                <div className="time"><Clock /> {time}</div>
-            </div>
-            <div className="dateTime">
-                <div className="weatherTemp"> {getWeatherIcon(forecast.weatherMainDescription)} {forecast.temp} °C</div>
-            </div>
-            <div className="weatherMain">
-                <span className="title"> Description:</span>
-                <span className="value"> {forecast.weatherDescription} </span>
-            </div>
-            <div className="feelsLike">
-                <span className="title">Feels Like: </span>
-                <span className="value">{forecast.feelsLike}</span>
-            </div>
-            <div className="wind">
-                <span className="title">Wind:</span>
-                <span className="value"> {forecast.windSpeed} km / h</span>
-            </div>
-        </div>
+        <table className="nextDaysForecast">
+            <tr className="dateTime">
+                <td>{time} <Clock /></td>
+            </tr>
+            <tr className="temp">
+                <td> {forecast.temp} °C</td>
+            </tr>
+            <tr className="description">
+                <td>{forecast.weatherDescription} {getWeatherIcon(forecast.weatherMainDescription)}</td>
+            </tr>
+            <tr className="feelsLike">
+                <td>Feels Like: {forecast.feelsLike}°C</td>
+            </tr>
+            <tr className="wind">
+                <td>Wind: {forecast.windSpeed} km/h</td>
+            </tr>
+        </table>
     );
 };
 

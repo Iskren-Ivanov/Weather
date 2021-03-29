@@ -1,0 +1,7 @@
+.nextDaysForecast {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    font-size: 14px;
+    margin: 10px;
+}

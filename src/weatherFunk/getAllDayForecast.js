@@ -1,6 +1,8 @@
-const getAllDayForecast = (data, date) => {
-    const currentDay = date.getUTCDate();
+const getAllDayForecast = (data, dateStr) => {
     // debugger;
+    const splitedDate = dateStr.split('-');
+    const dateObj = new Date(splitedDate[2], splitedDate[1] - 1, splitedDate[0]);
+    const currentDay = dateObj.getDate();
     const currenDayData = []
     const { forecast } = data;
 

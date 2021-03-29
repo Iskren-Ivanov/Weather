@@ -2,14 +2,14 @@ import React from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom';
 
 import Main from '../Component/Main/Main';
-import FiveDaysForecast from '../Component/FiveDaysForecast/FiveDaysForecast';
+import NextDaysForecast from '../Component/NextDaysForecast/NextDaysForecast';
 import ForecastForTheAllDay from '../Component/ForecastForTheAllDay/ForecastForTheAllDay';
 
 const Router = () => (
     <Switch>
         <Route exact path='/' component={Main} />
-        <Route path='/fiveDaysForecastIn/:id' component={FiveDaysForecast} />
-        <Route path='/theForecastIn/:id' component={ForecastForTheAllDay} />
+        <Route path='/nextDaysForecastIn/:id' component={NextDaysForecast} />
+        <Route path='/theForecastIn/:id/:date' component={ForecastForTheAllDay} />
         <Redirect to="/" />
     </Switch>
 );

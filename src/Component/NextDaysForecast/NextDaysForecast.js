@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import CurrentForecastCol from './CurrentForecastCol';
+import ForecastCol from './ForecastCol';
 import getNextDaysAvarageForecast from '../../weatherFunk/getNextDaysAvarageForecast';
 
-const FiveDaysForecast = (props) => {
+const NextDaysForecast = (props) => {
     const city = props.match.params.id
     const [forecast, setForecast] = useState([]);
 
@@ -14,17 +14,16 @@ const FiveDaysForecast = (props) => {
     }, [city]);
 
     return (
-        <div className='weatherContainer'>
-            {forecast?.map(data => {
-                // debugger;
-                return (<div className='col'>
-                    <CurrentForecastCol
+        <div>
+            <h1>The Weather In The Next Days In {city}</h1>
+            <div className='weatherContainer'>
+                {forecast?.map(data =>
+                    <ForecastCol
                         data={data}
-                        city={city} />
-                </div>)
-            })}
+                        city={city} />)}
+            </div>
         </div>
     );
 };
 
-export default FiveDaysForecast
+export default NextDaysForecast

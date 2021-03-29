@@ -8,7 +8,7 @@ import './Main.css';
 const Main = () => {
   return (
     <div>
-      <div className='headerContainer'>
+      <div>
         <SearchBar />
       </div>
       <div className='weatherContainer'>

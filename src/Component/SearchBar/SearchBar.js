@@ -9,24 +9,18 @@ const SearchBar = () => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        history.push(`/fiveDaysForecastIn/${searchCity}`);
+        history.push(`/nextDaysForecastIn/${searchCity}`);
     };
 
     return (
-        <form className='search' onSubmit={e => handleSubmit(e)}>
-            <div classNanme="box box-1">
+        <form className='searchForm' onSubmit={e => handleSubmit(e)}>
+            <div classNanme="box">
                 <input
                     type='text'
                     className='searchTerm'
                     placeholder='Get Weather Forecast'
                     value={searchCity}
                     onChange={(e) => setSearchCity(e.target.value)} />
-            </div>
-            <div classNanme="box box-2">
-                <button
-                    type='submit'
-                    className='searchButton'
-                > Search </button>
             </div>
         </form>
     );

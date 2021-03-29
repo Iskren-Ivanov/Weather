@@ -3,10 +3,14 @@ import { useHistory } from 'react-router-dom';
 
 import './BtnShowDetails.css';
 
-const BtnShowDetails = ({ city }) => {
+const BtnShowDetails = ({ city, date }) => {
     const history = useHistory();
+
+    const onClick = () => {
+        history.push({ pathname: `/theForecastIn/${city}/${date.replaceAll('/', "-")}` })
+    };
     return (
-        <button className="btnShowDetailedForecast" onClick={() => history.push(`/theForecastIn/${city}`)}> Show Detailed Forecast</button >
+        <button className="btnShowDetailedForecast" onClick={() => onClick()}> Show Detailed Forecast</ button >
     );
 };
 
