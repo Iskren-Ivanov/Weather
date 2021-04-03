@@ -1,4 +1,3 @@
-import getWeatherNextSixDays from './getWeаtherNextSixDays';
 import abbreviatedNameDay from './abbreviatedNameDay';
 import getNextDaysAvarageForecast from './getNextDaysAvarageForecast';
 
