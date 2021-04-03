@@ -1,19 +1,19 @@
-.leftColums {
-    width: 33%;
+.left-colums {
+    width: 32%;
     height: 100%;
     float: left;
     margin-right: 5px;
 }
 
-.centerColums {
-    width: 33%;
+.center-colums {
+    width: 32%;
     height: 100%;
     float: left;
     margin-right: 5px;
 }
 
-.rightColums {
-    width: 33%;
+.right-colums {
+    width: 32%;
     height: 100%;
     float: left;
 }

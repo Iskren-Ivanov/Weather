@@ -16,7 +16,7 @@ const NextDaysForecast = (props) => {
     return (
         <div>
             <h1>The Weather In The Next Days In {city}</h1>
-            <div className='weatherContainer'>
+            <div className='weather-container'>
                 {forecast?.map(data =>
                     <ForecastCol
                         data={data}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 
 import './SearchBar.css';
 
@@ -13,16 +13,15 @@ const SearchBar = () => {
     };
 
     return (
-        <form className='searchForm' onSubmit={e => handleSubmit(e)}>
-            <div classNanme="box">
-                <input
-                    type='text'
-                    className='searchTerm'
+        <div className='search-container'>
+            <form onSubmit={e => handleSubmit(e)}>
+                <input type='text'
+                    className='search-term'
                     placeholder='Get Weather Forecast'
                     value={searchCity}
                     onChange={(e) => setSearchCity(e.target.value)} />
-            </div>
-        </form>
+            </form>
+        </div >
     );
 };
 

@@ -10,7 +10,7 @@ const Router = () => (
         <Route exact path='/' component={Main} />
         <Route path='/nextDaysForecastIn/:id' component={NextDaysForecast} />
         <Route path='/theForecastIn/:id/:date' component={ForecastForTheAllDay} />
-        <Redirect to="/" />
+        <Redirect to='/' />
     </Switch>
 );
 

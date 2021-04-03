@@ -1,5 +1,4 @@
 import React from 'react';
-
 import BasicWeather from '../BasicWeather/BasicWeather';
 import SearchBar from '../SearchBar/SearchBar';
 
@@ -8,17 +7,15 @@ import './Main.css';
 const Main = () => {
   return (
     <div>
-      <div>
-        <SearchBar />
-      </div>
-      <div className='weatherContainer'>
-        <div className='leftColums'>
+      <SearchBar />
+      <div className='weather-container'>
+        <div className='left-colums'>
           <BasicWeather city={'Sofia'} />
         </div>
-        <div className='centerColums'>
+        <div className='center-colums'>
           <BasicWeather city={'Rome'} />
         </div>
-        <div className='rightColums'>
+        <div className='right-colums'>
           <BasicWeather city={'Barcelona'} />
         </div>
       </div>

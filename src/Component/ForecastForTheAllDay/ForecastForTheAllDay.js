@@ -16,10 +16,9 @@ const ForecastForTheAllDay = (props) => {
     return (
         <div>
             <h1>Forecast In {city} For {date.replaceAll('-', '/')} </h1>
-            <div className="weatherContainer">
+            <div className='weather-container'>
                 {data?.map(el => (
-                    <ForecastCol className="forecastForAllDaysCol"
-                        forecast={el} />
+                    <ForecastCol forecast={el} />
                 ))}
             </div>
         </div>

@@ -1,4 +1,4 @@
-.btnShowDetailedForecast {
+.btn-show-detailed-forecast {
     border-color: transparent;
     background-color: rgba(0, 0, 0, 0);
     border: 0.1em solid #000000;
@@ -10,7 +10,7 @@
     font-size: 16px;
 }
 
-.btnShowDetailedForecast:hover {
+.btn-show-detailed-forecast:hover {
     text-shadow: 0 0 2em rgba(255, 255, 255, 1);
     color: #ffffff;
     border-color: #978484;
