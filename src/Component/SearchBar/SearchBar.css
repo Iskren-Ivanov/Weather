@@ -1,11 +1,11 @@
 .search-term {
-  width: 100%;
+  width: 99.4%;
   border: 3px solid #00B4CC;
   border-right: none;
   border-radius: 5px 0 0 5px;
   outline: none;
   color: #9DBFAF;
-  box-sizing: content-box;
+  /* box-sizing: content-box; */
 }
 
 .search-term:focus {
