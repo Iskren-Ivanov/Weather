@@ -1,7 +1,7 @@
 import getCoordinates from './getCoordinates';
 import abbreviatedNameDay from './abbreviatedNameDay';
 
-const appKey = "e0906f60e7b624e1904f340f026ee8dd";
+const appKey = 'e0906f60e7b624e1904f340f026ee8dd';
 
 const getNextDaysAvarageForecast = async (city) => {
     const data = getCoordinates(city);
@@ -14,12 +14,12 @@ const getNextDaysAvarageForecast = async (city) => {
                 // debugger;
                 data.daily.map(obj => {
                     let sunrise = ((new Date(1000 * obj.sunrise)).toLocaleTimeString('en-GB', {
-                        hour: "numeric",
-                        minute: "numeric"
+                        hour: 'numeric',
+                        minute: 'numeric'
                     }));
                     let sunset = (new Date(1000 * obj.sunset)).toLocaleTimeString('en-GB', {
-                        hour: "numeric",
-                        minute: "numeric"
+                        hour: 'numeric',
+                        minute: 'numeric'
                     });
                     const dateTimeObj = new Date(obj.dt * 1000);
                     const dayOfWeek = abbreviatedNameDay(dateTimeObj);
@@ -40,23 +40,23 @@ const getNextDaysAvarageForecast = async (city) => {
                         sunrise,
                         sunset,
                         humidity,
-                        "feelsLike": {
-                            "day": dayFeelsLike,
-                            "night": nightFeelsLike,
-                            "eve": eveFeelsLike,
-                            "morn": mornFeelsLike,
+                        'feelsLike': {
+                            'day': dayFeelsLike,
+                            'night': nightFeelsLike,
+                            'eve': eveFeelsLike,
+                            'morn': mornFeelsLike,
                         },
-                        "temp": {
-                            "day": Math.round(day),
-                            "eve": Math.round(eve),
-                            "max": Math.round(max),
-                            "min": Math.round(min),
-                            "morn": Math.round(morn),
-                            "night": Math.round(night),
+                        'temp': {
+                            'day': Math.round(day),
+                            'eve': Math.round(eve),
+                            'max': Math.round(max),
+                            'min': Math.round(min),
+                            'morn': Math.round(morn),
+                            'night': Math.round(night),
                         },
-                        "description": {
+                        'description': {
                             main,
-                            "text": description,
+                            'text': description,
                         },
                         windSpeed
                     });

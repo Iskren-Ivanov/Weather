@@ -13,7 +13,7 @@ const Main = () => {
           <BasicWeather city={'Sofia'} />
         </div>
         <div className='center-colums'>
-          <BasicWeather city={'Rome'} />
+          <BasicWeather city={'Milan'} />
         </div>
         <div className='right-colums'>
           <BasicWeather city={'Barcelona'} />

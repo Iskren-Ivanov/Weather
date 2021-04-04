@@ -13,6 +13,7 @@ const BasicWeather = ({ city }) => {
     useEffect(() => {
         getWeather(city)
             .then(async response => {
+                // debugger;
                 setData(response);
                 setNextTreeDaysInfo(await getNextThreeDaysInfo(response.date, city));
                 setCurrentWeatherIcon(getWeatherIcon(response.mainDiscription));
@@ -20,7 +21,7 @@ const BasicWeather = ({ city }) => {
     }, [city]);
 
     return (
-        <table >
+        <table>
             <tr className='location'>
                 <td>{data.locationName}</td>
             </tr>

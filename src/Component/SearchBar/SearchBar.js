@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+// import cityList from '../../cityList/city.list.json';
 
 import './SearchBar.css';
 
@@ -11,15 +12,14 @@ const SearchBar = () => {
         event.preventDefault();
         history.push(`/nextDaysForecastIn/${searchCity}`);
     };
-
     return (
         <div className='search-container'>
             <form onSubmit={e => handleSubmit(e)}>
-                <input type='text'
+                {<input type='text'
                     className='search-term'
                     placeholder='Get Weather Forecast'
                     value={searchCity}
-                    onChange={(e) => setSearchCity(e.target.value)} />
+                    onChange={(e) => setSearchCity(e.target.value)} />}
             </form>
         </div >
     );
