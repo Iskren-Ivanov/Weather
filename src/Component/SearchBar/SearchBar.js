@@ -12,6 +12,7 @@ const SearchBar = () => {
         event.preventDefault();
         history.push(`/nextDaysForecastIn/${searchCity}`);
     };
+    
     return (
         <div className='search-container'>
             <form onSubmit={e => handleSubmit(e)}>

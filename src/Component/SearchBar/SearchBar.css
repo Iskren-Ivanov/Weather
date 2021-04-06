@@ -1,11 +1,14 @@
+.search-container {
+  box-sizing: border-box;
+}
+
 .search-term {
-  width: 99.4%;
+  width: 100%;
   border: 3px solid #00B4CC;
   border-right: none;
   border-radius: 5px 0 0 5px;
   outline: none;
   color: #9DBFAF;
-  /* box-sizing: content-box; */
 }
 
 .search-term:focus {
