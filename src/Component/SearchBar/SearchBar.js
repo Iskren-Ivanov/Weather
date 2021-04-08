@@ -15,11 +15,11 @@ const SearchBar = () => {
     return (
         <div className='search-container'>
             <form onSubmit={e => handleSubmit(e)}>
-                {<input type='text'
+                <input type='text'
                     className='search-term'
                     placeholder='Get Weather Forecast'
                     value={searchCity}
-                    onChange={(e) => setSearchCity(e.target.value)} />}
+                    onChange={(e) => setSearchCity(e.target.value)} />
             </form>
         </div >
     );
