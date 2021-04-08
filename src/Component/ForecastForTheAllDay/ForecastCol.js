@@ -1,7 +1,6 @@
 import React from 'react';
 import getWeatherIcon from '../../weatherFunk/getWeatherIcon';
 import Clock from '../FeatherIcons/Clock';
-import './ForecastCol.css';
 
 const ForecastCol = ({ forecast }) => {
     const newDate = new Date(forecast.dayTime);

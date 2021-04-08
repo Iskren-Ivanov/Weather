@@ -4,24 +4,28 @@ import getAllDayForecast from '../../weatherFunk/getAllDayForecast';
 import ForecastCol from './ForecastCol';
 
 const ForecastForTheAllDay = (props) => {
-    // debugger;
     const date = props.match.params.date;
     const city = props.match.params.id;
     const [data, setData] = useState([]);
     useEffect(async () => {
-        // debugger;
         setData(getAllDayForecast(await getWeatherNextSixDays(city), date));
     }, [city]);
 
     return (
-        <div>
+        <main className="forecast-for-all-day">
             <h1>Forecast In {city} For {date.replaceAll('-', '/')} </h1>
-            <div className='weather-container'>
-                {data?.map(el => (
-                    <ForecastCol forecast={el} />
-                ))}
-            </div>
-        </div>
+            {data?.map(el => (
+                <section>
+                    <article className="main-article">
+                        <ul className="main-article__lists">
+                            <li className="main-article__list">
+                                <ForecastCol forecast={el} />
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+            ))}
+        </main>
     );
 };
 

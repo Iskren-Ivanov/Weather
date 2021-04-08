@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-// import cityList from '../../cityList/city.list.json';
 
 import './SearchBar.css';
 

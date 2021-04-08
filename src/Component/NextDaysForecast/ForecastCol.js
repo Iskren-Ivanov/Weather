@@ -2,7 +2,6 @@ import React from 'react';
 import getWeatherIcon from '../../weatherFunk/getWeatherIcon';
 import BtnShowDetails from '../../UI/BtnShowDetails/BtnShowDetails';
 import Clock from '../FeatherIcons/Clock';
-import './ForecastCol.css';
 
 const CurrentForecastCol = ({ city, data }) => {
     return (
@@ -39,7 +38,7 @@ const CurrentForecastCol = ({ city, data }) => {
                 <td>Sunset: {data.sunset}<Clock /></td>
             </tr>
             <tr>
-                <td><BtnShowDetails city={city} date={data.date} /></td>
+                <BtnShowDetails city={city} date={data.date} />
             </tr>
         </table>
     );

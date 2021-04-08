@@ -7,22 +7,28 @@ const NextDaysForecast = (props) => {
     const [forecast, setForecast] = useState([]);
 
     useEffect(async () => {
-        // debugger;
         await getNextDaysAvarageForecast(city).then(res => {
             setForecast(res);
         });
     }, [city]);
 
     return (
-        <div>
+        <main className="next-days-forecast">
             <h1>The Weather In The Next Days In {city}</h1>
-            <div className='weather-container'>
-                {forecast?.map(data =>
-                    <ForecastCol
-                        data={data}
-                        city={city} />)}
-            </div>
-        </div>
+            {forecast?.map(data =>
+                <section>
+                    <article className="main-article">
+                        <ul className="main-article__lists">
+                            <li className="main-article__list">
+                                <ForecastCol
+                                    data={data}
+                                    city={city} />
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+            )}
+        </main>
     );
 };
 

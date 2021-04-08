@@ -2,25 +2,33 @@ import React from 'react';
 import BasicWeather from '../BasicWeather/BasicWeather';
 import SearchBar from '../SearchBar/SearchBar';
 
-import './Main.css';
-
-const Main = () => {
-  return (
-    <div>
+const Main = () => (
+  <main className="main">
+    <section>
       <SearchBar />
-      <div className='weather-container'>
-        <div className='left-colums'>
-          <BasicWeather city={'Sofia'} />
-        </div>
-        <div className='center-colums'>
-          <BasicWeather city={'Milan'} />
-        </div>
-        <div className='right-colums'>
-          <BasicWeather city={'Barcelona'} />
-        </div>
-      </div>
-    </div>
-  );
-};
+      <article className="main-article">
+        <ul className="main-article__lists">
+          <li className="main-article__list">
+            <BasicWeather city={'Sofia'} />
+          </li>
+        </ul>
+      </article>
+      <article className="main-article">
+        <ul className="main-article__lists">
+          <li className="main-article__list">
+            <BasicWeather city={'Milan'} />
+          </li>
+        </ul>
+      </article>
+      <article className="main-article">
+        <ul className="main-article__lists">
+          <li className="main-article__list">
+            <BasicWeather city={'Barcelona'} />
+          </li>
+        </ul>
+      </article>
+    </section>
+  </main>
+);
 
 export default Main;

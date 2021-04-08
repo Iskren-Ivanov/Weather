@@ -13,7 +13,6 @@ const BasicWeather = ({ city }) => {
     useEffect(() => {
         getWeather(city)
             .then(async response => {
-                // debugger;
                 setData(response);
                 setNextTreeDaysInfo(await getNextThreeDaysInfo(response.date, city));
                 setCurrentWeatherIcon(getWeatherIcon(response.mainDiscription));
@@ -56,7 +55,7 @@ const BasicWeather = ({ city }) => {
                 <td>{nextTreeDaysInfo[2]?.dayOfWeek}: {nextTreeDaysInfo[2]?.temp.max}°C {getWeatherIcon(nextTreeDaysInfo[2]?.weatherMain)}</td>
             </tr>
             <tr>
-                <td><BtnShowDetails city={city} date={data.date} /></td>
+                <BtnShowDetails city={city} date={data.date} />
             </tr>
         </table >
     );
