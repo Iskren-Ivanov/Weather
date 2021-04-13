@@ -7,25 +7,13 @@ const Main = () => (
     <section>
       <SearchBar />
       <article className="main-article">
-        <ul className="main-article__lists">
-          <li className="main-article__list">
-            <BasicWeather city={'Sofia'} />
-          </li>
-        </ul>
+        <BasicWeather city={'Sofia'} />
       </article>
       <article className="main-article">
-        <ul className="main-article__lists">
-          <li className="main-article__list">
-            <BasicWeather city={'Milan'} />
-          </li>
-        </ul>
+        <BasicWeather city={'Milan'} />
       </article>
       <article className="main-article">
-        <ul className="main-article__lists">
-          <li className="main-article__list">
-            <BasicWeather city={'Barcelona'} />
-          </li>
-        </ul>
+        <BasicWeather city={'Barcelona'} />
       </article>
     </section>
   </main>

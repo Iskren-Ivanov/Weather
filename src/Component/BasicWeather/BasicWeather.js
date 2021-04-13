@@ -20,7 +20,7 @@ const BasicWeather = ({ city }) => {
     }, [city]);
 
     return (
-        <table>
+        <table >
             <tr className='location'>
                 <td>{data.locationName}</td>
             </tr>

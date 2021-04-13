@@ -17,11 +17,7 @@ const ForecastForTheAllDay = (props) => {
             {data?.map(el => (
                 <section>
                     <article className="main-article">
-                        <ul className="main-article__lists">
-                            <li className="main-article__list">
-                                <ForecastCol forecast={el} />
-                            </li>
-                        </ul>
+                        <ForecastCol forecast={el} />
                     </article>
                 </section>
             ))}

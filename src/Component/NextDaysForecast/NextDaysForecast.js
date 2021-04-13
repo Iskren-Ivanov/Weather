@@ -18,13 +18,9 @@ const NextDaysForecast = (props) => {
             {forecast?.map(data =>
                 <section>
                     <article className="main-article">
-                        <ul className="main-article__lists">
-                            <li className="main-article__list">
                                 <ForecastCol
                                     data={data}
                                     city={city} />
-                            </li>
-                        </ul>
                     </article>
                 </section>
             )}
