@@ -3,19 +3,49 @@
   font-weight: bold;
 }
 
+td {
+  padding: 0;
+}
+
 .main-article {
   text-align: center;
-  padding: 16px;
-  margin: 8px;
   display: flex;
   box-shadow: 2px 2px 2px 2px;
   flex-direction: row;
   float: left;
-  margin: 10px 2px auto;
+  margin: 10px 0 0 13px;
   position: relative;
-  text-align: center;
-  height: 400px;
-  width: 30%;
+  height: 32%;
+  width: 32%;
+}
+
+.next-days {
+  box-sizing: border-box;
+  width: 11%;
+  height: 70%;
+}
+
+.container-basic {
+  width: 100%;
+}
+
+/*  */
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+td {
+  padding: 1px;
+}
+
+.underline {
+  border-top: solid 2px #000;
+}
+
+.bolder {
+  font-weight: bolder;
 }
 
 .background {

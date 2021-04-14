@@ -6,7 +6,7 @@ import Clock from '../FeatherIcons/Clock';
 const CurrentForecastCol = ({ city, data }) => {
     return (
         <table className='next-days-forecast'>
-            <tr className='date-dayname'>
+            <tr className='date-dayname bolder'>
                 <th>{data.dayOfWeek}</th>
             </tr>
             <tr className='date-day'>
@@ -15,27 +15,47 @@ const CurrentForecastCol = ({ city, data }) => {
             <tr className='description'>
                 <td>{data.description.text}{getWeatherIcon(data.description.main)}</td>
             </tr>
-            <tr className='temp'>
-                <td>Day Temp: {data.temp.day}°C</td>
-                <td>Eve Temp: {data.temp.eve}°C</td>
-                <td>Max Temp: {data.temp.max}°C</td>
-                <td>Min Temp: {data.temp.min}°C</td>
+            <tr >
+                <td className='underline bolder'>Temp:</td>
             </tr>
-            <tr className='feels-like'>
-                <td>Day Feels Like: {data.feelsLike.day}°C</td>
-                <td>Night Feels Like: {data.feelsLike.night}°C</td>
-                <td>Evening Feels Like: {data.feelsLike.eve}°C</td>
-                <td>Morning Feels Like: {data.feelsLike.morn}°C</td>
+            <tr className='temp-day'>
+                <td>Day: {data.temp.day}°C</td>
+            </tr>
+            <tr className='temp-eve'>
+                <td>Eve: {data.temp.eve}°C</td>
+            </tr>
+            <tr className='temp-max'>
+                <td>Max: {data.temp.max}°C</td>
+            </tr>
+            <tr className='temp-min'>
+                <td>Min: {data.temp.min}°C</td>
+            </tr>
+            <tr>
+                <td className='underline bolder'>Feel Like:</td>
+            </tr>
+            <tr className='feels-like-day'>
+                <td>Day: {data.feelsLike.day}°C</td>
+            </tr>
+            <tr className='feels-like-night'>
+                <td>Night: {data.feelsLike.night}°C</td>
+            </tr>
+            <tr className='feels-like-eve'>
+                <td>Evening: {data.feelsLike.eve}°C</td>
+            </tr>
+            <tr className='feels-like-morn'>
+                <td>Morning: {data.feelsLike.morn}°C</td>
             </tr>
             <tr className='wind'>
-                <td>Wind: {data.windSpeed} km/h</td>
+                <td className='underline'>Wind: {data.windSpeed} km/h</td>
             </tr>
             <tr className='humidity'>
-                <td>Humidity: {data.humidity}%</td>
+                <td className='underline' >Humidity: {data.humidity}%</td>
             </tr>
-            <tr className='sun'>
-                <td>Sunrise: {data.sunrise}<Clock /></td>
-                <td>Sunset: {data.sunset}<Clock /></td>
+            <tr className='sunrise'>
+                <td className='underline'>Sunrise: {data.sunrise}<Clock /></td>
+            </tr>
+            <tr className='sunset'>
+                <td >Sunset: {data.sunset}<Clock /></td>
             </tr>
             <tr>
                 <BtnShowDetails city={city} date={data.date} />

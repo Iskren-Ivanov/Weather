@@ -10,7 +10,7 @@ const BtnShowDetails = ({ city, date }) => {
         history.push({ pathname: `/theForecastIn/${city}/${date.replaceAll('/', '-')}` })
     };
     return (
-        <button className='btn-show-detailed-forecast' onClick={() => onClick()}> Show Detailed Forecast</ button >
+        <button className='btn' onClick={() => onClick()}> Show Detailed Forecast</ button >
     );
 };
 
