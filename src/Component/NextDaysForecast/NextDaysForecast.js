@@ -13,16 +13,14 @@ const NextDaysForecast = (props) => {
     }, [city]);
 
     return (
-        <main className="next-days-forecast">
+        <main className="main next-days-main">
             <h1>The Weather In The Next Days In {city}</h1>
             {forecast?.map(data =>
-                <section>
                     <article className="main-article next-days">
                         <ForecastCol
                             data={data}
                             city={city} />
                     </article>
-                </section>
             )}
         </main>
     );

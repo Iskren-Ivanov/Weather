@@ -58,7 +58,10 @@ const CurrentForecastCol = ({ city, data }) => {
                 <td >Sunset: {data.sunset}<Clock /></td>
             </tr>
             <tr>
-                <BtnShowDetails city={city} date={data.date} />
+                <BtnShowDetails
+                    city={city}
+                    date={data.date}
+                    customClass='btn-next-days' />
             </tr>
         </table>
     );

@@ -45,17 +45,20 @@ const BasicWeather = ({ city }) => {
             <tr className='wind'>
                 <td>Wind: {data.windSpeed} km/h</td>
             </tr>
-            <tr className='next-days'>
+            <tr>
                 <td>{nextTreeDaysInfo[0]?.dayOfWeek}: {nextTreeDaysInfo[0]?.temp.max}°C {getWeatherIcon(nextTreeDaysInfo[0]?.weatherMain)} </td>
             </tr>
-            <tr className='next-days'>
+            <tr>
                 <td>{nextTreeDaysInfo[1]?.dayOfWeek}: {nextTreeDaysInfo[1]?.temp.max}°C {getWeatherIcon(nextTreeDaysInfo[1]?.weatherMain)}</td>
             </tr>
-            <tr className='next-days'>
+            <tr>
                 <td>{nextTreeDaysInfo[2]?.dayOfWeek}: {nextTreeDaysInfo[2]?.temp.max}°C {getWeatherIcon(nextTreeDaysInfo[2]?.weatherMain)}</td>
             </tr>
             <tr>
-                <BtnShowDetails city={city} date={data.date} />
+                <BtnShowDetails
+                    city={city}
+                    date={data.date}
+                    customClass='btn-main' />
             </tr>
         </table >
     );
