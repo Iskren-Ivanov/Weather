@@ -20,9 +20,9 @@ const BasicWeather = ({ city }) => {
     }, [city]);
 
     return (
-        <table className="container-basic">
+        <table className='container-basic'>
             <tr className='location'>
-                <td>{data.locationName}</td>
+                <td className="bolder">{data.locationName}</td>
             </tr>
             <tr className='temp'>
                 <td> {data.temp}°C</td>
@@ -58,7 +58,7 @@ const BasicWeather = ({ city }) => {
                 <BtnShowDetails
                     city={city}
                     date={data.date}
-                    customClass='btn-main' />
+                    customClass='btn-main bolder' />
             </tr>
         </table >
     );

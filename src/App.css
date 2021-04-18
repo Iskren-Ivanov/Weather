@@ -6,29 +6,28 @@
 .main {
   width: 100%;
   justify-content: space-around;
-  margin: 0 12px
+  margin: 0 0.7rem;
 }
 
 .main-article {
   text-align: center;
   box-shadow: 2px 0 2px 2px;
   float: left;
-  margin: 5px;
-  width: 32%;
+  margin: 0.3rem;
 }
 
 .next-days-main {
-  margin: 0 35px
+  margin: 0 2.1rem
 }
 
 .next-days {
   width: 11%;
-  height: 700px;
-  margin-bottom: 22px;
+  height: 43.7rem;
+  margin-bottom: 1.3rem;
 }
 
 .forecast-for-all-day {
-  padding: 0 20px;
+  padding: 0 1.3rem;
 }
 
 .forecast-for-all-day h1 {
@@ -36,12 +35,12 @@
 }
 
 .all-days {
-  width: 110px;
-  height: 500px;
+  width: 7rem;
+  height: 31rem;
 }
 
 table {
-  border-spacing: 0 10px;
+  border-spacing: 0 0.6rem;
 }
 
 .underline {

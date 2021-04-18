@@ -7,7 +7,7 @@ const CurrentForecastCol = ({ city, data }) => {
     return (
         <table className='next-days-forecast'>
             <tr className='date-dayname bolder'>
-                <th>{data.dayOfWeek}</th>
+                <th className='bolder'>{data.dayOfWeek}</th>
             </tr>
             <tr className='date-day'>
                 <td>{data.date}</td>
@@ -49,7 +49,7 @@ const CurrentForecastCol = ({ city, data }) => {
                 <td className='underline'>Wind: {data.windSpeed} km/h</td>
             </tr>
             <tr className='humidity'>
-                <td className='underline' >Humidity: {data.humidity}%</td>
+                <td className='underline'>Humidity: {data.humidity}%</td>
             </tr>
             <tr className='sunrise'>
                 <td className='underline'>Sunrise: {data.sunrise}<Clock /></td>
@@ -61,7 +61,7 @@ const CurrentForecastCol = ({ city, data }) => {
                 <BtnShowDetails
                     city={city}
                     date={data.date}
-                    customClass='btn-next-days' />
+                    customClass='btn-next-days bolder' />
             </tr>
         </table>
     );
