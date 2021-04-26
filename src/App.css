@@ -3,40 +3,23 @@
   font-weight: bold;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+}
+
 .main {
   width: 100%;
   justify-content: space-around;
-  margin: 0 0.7rem;
 }
 
 .main-article {
+  display: flex;
+  justify-content: center;
   text-align: center;
   box-shadow: 2px 0 2px 2px;
   float: left;
   margin: 0.3rem;
-}
-
-.next-days-main {
-  margin: 0 2.1rem
-}
-
-.next-days {
-  width: 11%;
-  height: 43.7rem;
-  margin-bottom: 1.3rem;
-}
-
-.forecast-for-all-day {
-  padding: 0 1.3rem;
-}
-
-.forecast-for-all-day h1 {
-  margin: 0 auto;
-}
-
-.all-days {
-  width: 7rem;
-  height: 31rem;
 }
 
 table {
@@ -68,3 +51,5 @@ h1 {
 .wind {
   text-transform: none;
 }
+
+@media(min-width: 40rem) {}
