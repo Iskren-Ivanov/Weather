@@ -1,5 +1,10 @@
 .all-days {
-    /* width: 10rem; */
-    width: 80%;
-    height: 15rem;
+    width: 22rem;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1400px) and (min-width: 768px) {
+    .all-days {
+        margin: 0 0.2rem;
+    }
 }

@@ -1,14 +1,27 @@
 .next-days-article {
+    display: flex;
+    width: 95vw;
+    margin: 0 0 0.5rem 0.15rem;
+    margin-left: 0.5rem;
     text-align: center;
     box-shadow: 2px 0 2px 2px;
 }
 
-.next-days-main {
-    margin-bottom: 0.5rem;
+.next-days-forecast {
+    width: 100%;
 }
 
-.next-days {
-    width: 11%;
-    height: 43.7rem;
-    margin-bottom: 1.3rem;
+.next-days-main h1 {
+    font-size: large;
+}
+
+@media screen and (max-width: 1400px) and (min-width: 768px) {
+    .next-days-article {
+        text-align: center;
+        box-shadow: 2px 0 2px 2px;
+        margin: 0 0.3rem;
+    }
+    .next-days-main h1 {
+        font-size: 2rem;
+    }
 }

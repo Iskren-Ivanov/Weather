@@ -18,14 +18,42 @@
 }
 
 .btn-main {
+    width: 95vw;
+    height: 3.2rem;
     position: relative;
     top: 0.5rem;
-    width: 27.3rem;
-    height: 3.2rem;
 }
 
 .btn-next-days {
-    position: relative;
+    /* position: relative;
     top: 0.5rem;
-    height: 3.4rem;
+    height: 3.4rem; */
+}
+
+@media screen and (max-width: 1400px) and (min-width: 768px) {
+    .btn {
+        box-sizing: border-box;
+        width: 100%;
+        border-color: transparent;
+        background-color: rgba(0, 0, 0, 0);
+        border: 0.1em solid #000000;
+        font-family: 'Roboto', sans-serif;
+        transition: all 0.15s;
+        font-size: 1rem;
+        box-shadow: 2px 2px 2px 2px;
+    }
+    .btn-main {
+        width: 32vw;
+        height: 3.2rem;
+        position: relative;
+        top: 0.5rem;
+        /* width: 27.3rem;  */
+        /* height: 3.2rem; */
+    }
+    .btn-next-days {
+        position: relative;
+        top: 2rem;
+        height: 10vh;
+        font-weight: bold
+    }
 }
