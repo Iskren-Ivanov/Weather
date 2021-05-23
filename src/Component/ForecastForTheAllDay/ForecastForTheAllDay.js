@@ -9,7 +9,6 @@ const ForecastForTheAllDay = (props) => {
     const city = props.match.params.id;
     const [data, setData] = useState([]);
     useEffect(async () => {
-        // debugger;
         setData(getAllDayForecast(await getWeatherNextSixDays(city), date));
     }, [city]);
 
