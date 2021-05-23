@@ -11,7 +11,6 @@ const getNextDaysAvarageForecast = async (city) => {
         await fetch(` https://api.openweathermap.org/data/2.5/onecall?lat=${data[0].coord.lat}&lon=${data[0].coord.lon}&exclude=current&appid=${appKey}&units=metric`)
             .then(response => response.json())
             .then(data => {
-                // debugger;
                 data.daily.map(obj => {
                     let sunrise = ((new Date(1000 * obj.sunrise)).toLocaleTimeString('en-GB', {
                         hour: 'numeric',

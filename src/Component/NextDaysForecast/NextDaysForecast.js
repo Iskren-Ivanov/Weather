@@ -6,10 +6,9 @@ import './NextDaysForecast.css';
 const NextDaysForecast = (props) => {
     const city = props.match.params.id
     const [forecast, setForecast] = useState([]);
-
     useEffect(async () => {
         await getNextDaysAvarageForecast(city).then(res => {
-            setForecast(res);
+            setForecast(res.slice(0, 6));
         });
     }, [city]);
 
