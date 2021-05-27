@@ -4,7 +4,7 @@
 }
 
 .container {
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .main {
@@ -12,7 +12,7 @@
 }
 
 table {
-  border-spacing: 0 0.6rem;
+  /* border-spacing: 0 0.6rem; */
 }
 
 .underline {
